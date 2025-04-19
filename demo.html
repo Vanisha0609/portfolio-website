@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Cards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    .projects-section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .projects-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 1rem;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .card-image {
+      position: relative;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    .arrow-btn {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      background-color: #e6f3ea;
+      border: none;
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .tags {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .branding {
+      background-color: #f4a261;
+    }
+
+    .marketing {
+      background-color: #9b5de5;
+    }
+
+    .packaging {
+      background-color: #2a9d8f;
+    }
+
+    .view-all {
+      margin-top: 3rem;
+      padding: 0.75rem 2rem;
+      border-radius: 999px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="projects-section">
+    <h2>Leading Companies Have Trusted Us</h2>
+    <div class="project-cards">
+
+      <!-- Card 1 -->
+      <div class="project-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1616628182502-cc1681cfbd4b" alt="Project Image">
+          <button class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <h3>Trust & Co.</h3>
+        <p>Fill out the form and the algorithm will offer the right team of experts</p>
+        <div class="tags">
+          <span class="tag branding">BRANDING</span>
+          <span class="tag packaging">PACKAGING</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="project-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Project Image">
+          <button class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <h3>Urban Outfitter</h3>
+        <p>Fill out the form and the algorithm will offer the right team of experts</p>
+        <div class="tags">
+          <span class="tag branding">BRANDING</span>
+          <span class="tag marketing">MARKETING</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="project-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1627634664728-3ecedc9b9090" alt="Project Image">
+          <button class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <h3>Tonic</h3>
+        <p>Fill out the form and the algorithm will offer the right team of experts</p>
+        <div class="tags">
+          <span class="tag branding">BRANDING</span>
+          <span class="tag packaging">PACKAGING</span>
+          <span class="tag marketing">MARKETING</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="view-all">View all cases</button>
+  </section>
+
+</body>
+</html>

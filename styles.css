@@ -1,0 +1,422 @@
+/* Brutalist/Minimalist CSS */
+:root {
+    --bg-color: #f5f5f5;
+    --header-color: #000000;
+    --text-color: #000000;
+    --highlight: #ff5500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+
+header {
+    width: 60%;           /* 90% of the parent container */
+    max-width: 1200px;     /* prevents it from getting too wide on big screens */
+    margin: 0 auto;        /* centers it horizontally */
+    height:20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 999px; /* Fully rounded corners */
+    padding: 1.25rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 2px 2px 1px var(--highlight); */
+    border: 3px solid var(--header-color);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 6px 6px 0px var(--highlight);
+    transform: translate(-2px, -2px);
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--highlight);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: var(--highlight);
+    color: var(--header-color);
+}
+nav a:focus{
+    outline: 3px solid var(--highlight)
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 2rem;
+    }
+
+    .header-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 0.2rem 0;
+    }
+}
+/* About Section with External Circle */
+#about {
+    width: 100%;
+    margin: 4rem 0;
+    position: relative;
+}
+
+
+.about-container {
+    position: relative;
+    z-index: 1; /* Add this line */
+    width: 55%;
+    max-width: 1200px;
+    left: 12%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.about-text-box {
+    width: 80%;
+    padding: 2.5rem;
+    border: 3px solid var(--header-color);
+    border-radius: 1rem;
+    background-color: var(--bg-color);
+    box-shadow: 8px 8px 0px var(--highlight);
+    z-index: 2;
+}
+
+.about-text-box h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-text-box h1 span {
+    color: var(--highlight);
+}
+
+.divider {
+    height: 3px;
+    background-color: var(--header-color);
+    margin: 1.5rem 0;
+    width: 100px;
+}
+
+.about-text-box p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.about-image-ext {
+    z-index: 2; /* Add this line */
+    position: absolute;
+    right:15%;
+    top: 2rem;
+    display:flex;
+}
+
+.circle-photo {
+    width: 300px;
+    height: 300px;
+    background-color: var(--highlight);
+    border-radius: 50%;
+    border: 3px solid var(--header-color);
+    box-shadow: 6px 6px 0px var(--header-color);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .about-container {
+        width: 90%;
+        flex-direction: column;
+    }
+    
+    .about-text-box {
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .about-image-ext {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .circle-photo {
+        margin-left: 0;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-text-box h1 {
+        font-size: 2rem;
+    }
+}
+hr{
+    height:3px;
+    background-color: black;
+    width:90%;
+    margin:3rem auto;
+}
+.info-section{
+    position:relative;
+    display:flex;
+    justify-content: space-evenly;
+    width: 90%;          
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.info{
+    position:relative;
+    max-width: 1200px;
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    padding:0.6rem;
+    gap:1.5rem;
+    align-items: flex-start
+    /* background-color: #ff5500; */
+    
+}
+.info-heading{
+    position:relative;
+    background-color:var(--bg-color);
+    padding:auto;
+    border:2px solid var(--header-color);
+    box-shadow:4px 4px 0 var(--highlight);
+    align-self: flex-start;
+}
+.info-heading h2{
+    padding:0.6rem 5rem 0.6rem 0.6rem ;
+}
+
+.skills-columns {
+    display: flex;
+    gap: 2.5rem;
+    /* margin-top:2rem; */
+}
+
+.skills-columns ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.skills-columns li {
+    font-weight:bold;
+    font-size:20px;
+    margin-top: 2rem;
+    margin-bottom: auto;
+    color:rgb(82, 79, 79) ;
+}
+.education-column{
+    margin-top: 1.9rem;
+    display:flex;
+    flex-direction:column;
+    gap:2.5rem;
+}
+.education {
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.education h3,h4{
+    color:rgb(71, 60, 60)
+}
+.hobbies-container{
+    width: 50%;
+    padding: 1rem 3rem 2rem 2rem;
+    border: 2px solid var(--header-color);
+    border-radius:0.5rem;
+    background-color: white;
+    box-shadow: 4px 4px 0px var(--highlight);
+    margin:4rem 0rem 4rem 8rem;
+
+}
+.hobbies-container h1{
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+.hobbies-container h1 span {
+    color: var(--highlight);
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+  }
+  
+  .circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ff5500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 2.5px 4px 0px black;
+  }
+  
+.circle-item p {
+    margin-top: 0.8rem;
+    font-weight: bold;
+  }
+#projects {
+    width: 85%;
+    margin: 1rem auto;
+    position: relative;
+}
+.project-heading{
+    padding-bottom:1rem;
+}
+.project-heading h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.project-heading h1 span{
+    color:var(--highlight);
+}
+.project-cards {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right:4rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 350px;
+    height:300px;
+    padding: 1rem;
+    text-align: left;
+    position: relative;
+    border: 2px solid var(--header-color);
+}
+
+.project-card h3 {
+    margin:1rem 2rem 0.8rem 0.8rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #555;
+    padding:0.8rem;
+}
+
+.tags {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-left:0.8rem;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    color: white;
+    background-color:var(--header-color);
+}
+
+.view-project{
+    margin:1.5rem 0 3rem 0.8rem;
+    padding:0.5rem 1.5rem 0.5rem 0.5rem;
+    background-color:white;
+    border:2px solid #000000;
+    border-radius:4px;
+    box-shadow:2px 2px 0 black;
+    font-weight: bold;
+    transition: var(--header-color) 0.3s ease, transform 0.2s ease;
+
+}
+.view-project:hover{
+    background-color: var(--header-color);
+    color:white;
+    box-shadow: none;
+    transform: scale(1.05);
+    cursor:pointer;
+}
