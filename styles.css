@@ -420,3 +420,71 @@ hr{
     transform: scale(1.05);
     cursor:pointer;
 }
+.footer{          
+    max-width: 1200px;     
+    margin: 0 auto;
+}
+.contact-section{
+    width:90%;
+    max-width: 1200px;     
+    margin: 0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+.social-links{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    gap:2rem;
+    padding:0.5rem 0;
+}
+.contact-me h1{
+    padding:1rem 0;
+}
+.contact-me p{
+    padding-bottom:0.5rem;
+}
+.custom-icon{
+    font-size:30px;
+}
+#contactme{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+#contactme h1{
+    padding-bottom:1rem;
+}
+form input,form textarea{
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 2px solid var(--header-color);
+  font-size: 16px;
+  transition: border 0.3s;
+}
+form input:focus,
+form textarea:focus {
+  border: 3px solid #d72a2a; 
+}
+form button {
+    background: white;
+    color: var(--text-color);
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 2px 2px 0 black;
+    font-size: 20px;
+    cursor: pointer;
+  }
+form button:hover{
+    background-color: #000000;
+    color:white;
+    border:none;
+}
+#formmessage{
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
